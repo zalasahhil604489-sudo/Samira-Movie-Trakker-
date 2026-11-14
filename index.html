@@ -1,0 +1,132 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Samira's Screen Club</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <!-- Main header -->
+    <header class="header">
+        <a class="brand" href="#" aria-label="Movie Tracker home">
+            <span class="brand-icon">▶</span>
+            <span>Samira<span class="brand-accent">Screen Club</span></span>
+        </a>
+
+        <nav class="navigation" aria-label="Main navigation">
+            <button class="nav-btn active" data-view="home">Home</button>
+            <button class="nav-btn" data-view="movies">All Movies</button>
+            <button class="nav-btn" data-view="watchlist">Watchlist</button>
+            <button class="nav-btn" data-view="watched">Watched</button>
+        </nav>
+
+        <div class="header-actions">
+            <button class="theme-btn" id="lightBtn" type="button" aria-label="Light theme">☀</button>
+            <button class="theme-btn" id="darkBtn" type="button" aria-label="Dark theme">☾</button>
+        </div>
+    </header>
+
+    <main class="container">
+        <!-- Home view -->
+        <section id="home" class="view active">
+            <div class="hero">
+                <div class="hero-copy">
+                    <p class="eyebrow">POP • CORN • MOVIE NIGHTS</p>
+                    <h1>Pick a film.<br><span>Make it a night.</span></h1>
+                    <p class="hero-description">A colorful little corner for movie nights, new discoveries, and stories worth remembering.</p>
+                    <button class="primary-btn" data-go="movies" type="button">Find a movie <span>→</span></button>
+                </div>
+                <div class="hero-art" aria-hidden="true">
+                    <div class="film-orbit orbit-one"></div>
+                    <div class="film-orbit orbit-two"></div>
+                    <div class="poster-stack">
+                        <div class="poster poster-back">✦</div>
+                        <div class="poster poster-front"><span>YOUR NEXT<br>FAVORITE<br>FILM</span><b>▶</b></div>
+                    </div>
+                    <span class="sparkle sparkle-one">✦</span>
+                    <span class="sparkle sparkle-two">✧</span>
+                </div>
+            </div>
+
+            <div class="section-heading">
+                <div>
+                    <p class="eyebrow">THE MOVIE MIX</p>
+                    <h2>Your movie mood</h2>
+                </div>
+                <button class="text-btn" data-go="movies" type="button">View collection →</button>
+            </div>
+
+            <div class="stats-grid">
+                <article class="stat-card">
+                    <span class="stat-icon purple">▣</span>
+                    <p>Total movies</p>
+                    <strong id="totalCount">6</strong>
+                    <small>In your collection</small>
+                </article>
+                <article class="stat-card">
+                    <span class="stat-icon orange">♡</span>
+                    <p>Want to watch</p>
+                    <strong id="watchlistCount">3</strong>
+                    <small>Waiting for movie night</small>
+                </article>
+                <article class="stat-card">
+                    <span class="stat-icon green">✓</span>
+                    <p>Watched</p>
+                    <strong id="watchedCount">3</strong>
+                    <small>Stories completed</small>
+                </article>
+            </div>
+
+            <div class="section-heading">
+                <div>
+                    <p class="eyebrow">FRESH FROM THE SCREEN</p>
+                    <h2>Movies to talk about</h2>
+                </div>
+            </div>
+            <div class="movie-grid" id="homeMovies"></div>
+        </section>
+
+        <!-- All movies view -->
+        <section id="movies" class="view">
+            <div class="page-heading">
+                <p class="eyebrow">YOUR LIBRARY</p>
+                <h1>All movies</h1>
+                <p>All your movie discoveries, together in one place.</p>
+            </div>
+            <div class="toolbar">
+                <input id="searchInput" type="search" placeholder="Search your movies..." aria-label="Search movies">
+                <span class="result-label" id="resultCount">6 movies</span>
+            </div>
+            <div class="movie-grid" id="allMovies"></div>
+        </section>
+
+        <!-- Watchlist view -->
+        <section id="watchlist" class="view">
+            <div class="page-heading">
+                <p class="eyebrow">UP NEXT</p>
+                <h1>My watchlist</h1>
+                <p>Your next movie-night picks.</p>
+            </div>
+            <div class="movie-grid" id="watchlistMovies"></div>
+        </section>
+
+        <!-- Watched view -->
+        <section id="watched" class="view">
+            <div class="page-heading">
+                <p class="eyebrow">THE CREDITS HAVE ROLLED</p>
+                <h1>Already watched</h1>
+                <p>A little collection of stories you've enjoyed.</p>
+            </div>
+            <div class="movie-grid" id="watchedMovies"></div>
+        </section>
+    </main>
+
+    <footer class="footer">
+        <span>© 2026 Screen Club</span>
+        <span>Created with ✦ by Samira Saleh <b>✦</b></span>
+    </footer>
+
+    <script src="script.js" defer></script>
+</body>
+</html>
